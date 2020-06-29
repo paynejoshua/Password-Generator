@@ -43,7 +43,8 @@ h2 {
 }
 
 .password-options {
-    text-align: center;
-    margin-top: 2%;
+    text-align: left;
+    margin-top: 8%;
+    margin-left: 41%;
     align-items: flex-start;
 }
