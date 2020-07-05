@@ -3,7 +3,7 @@
 // On click refresh page to show several input fields that show different criteria for generating a password
 // Validate that a character type has been selected
 // On click "Generate Password" output mashes the selected criteria is given in a display field at the bottom of the form. 
-// 
+
 
 // query select length of password
 
@@ -35,7 +35,9 @@
     let specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-","+"];
 // create array for numbers
     let numberArray = []
-// create array for total options selected
+
+
+
 
 // create for loop for numbers 
 
@@ -43,18 +45,14 @@ for (let i= 0; i<= 9; i++) {
     numberArray.push(i);
 }
 
-
-
-
-// create for loop for password
-
+// create function for password length being out of bounds
 button.addEventListener("click", function() {
    if (passwordLength["value"] < 8 || passwordLength["value"] >128) {
        alert("Whoops! Please choose a number that is between 8-128");
        return;
    } 
 
-   
+ // create array for total options selected  
     let optionsSelect = [];
 
     if (lowercase["checked"]) {
@@ -69,10 +67,17 @@ button.addEventListener("click", function() {
         });
     }
 
+    
     if (characters["checked"]) {
         specialChar.forEach(function(c){
             optionsSelect.push(c);
         });
+    }
+
+// include data validation to see if Special Characters is selected.
+    if (characters["checked"] !=true) {
+        alert ("You must select Special Characters");
+        return;
     }
 
     if (numbers["checked"]) {
@@ -81,18 +86,20 @@ button.addEventListener("click", function() {
         })
     }
 
+// include validation to see if any of the criteria has been selected
     if (optionsSelect.length==0) {
         alert("Whoops! It looks like you have not selected any criteria for your password. Check yourself before you wreck yourself. Pun intended.");
         return;
     }
 
+ 
+
+// create for loop for password
     let finalPassText = "";
 
     for (let i=0; i<passwordLength["value"]; i++) {
-        finalPassText += optionsSelect[i];
-
-
-        // console.log(Math.floor(Math.random() * (optionsSelect.length-1)));
+        finalPassText += optionsSelect[Math.floor(Math.random() * optionsSelect.length)];
+        
     }
 
     
@@ -100,5 +107,5 @@ button.addEventListener("click", function() {
 
 });
 
-// 
+
 
