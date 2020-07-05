@@ -1,0 +1,104 @@
+
+
+// On click refresh page to show several input fields that show different criteria for generating a password
+// Validate that a character type has been selected
+// On click "Generate Password" output mashes the selected criteria is given in a display field at the bottom of the form. 
+// 
+
+// query select length of password
+
+    let passwordLength = document.querySelector(".numberSelect");
+
+// query select Uppercase
+    let uppercase = document.querySelector("#uppercase");
+// query select Lowercase
+    let lowercase = document.querySelector("#lowercase");
+// query select Special Characters
+    let characters = document.querySelector("#characters");
+// query select numbers
+    let numbers = document.querySelector("#numbers");
+
+// query select password display
+    let finalPass = document.querySelector("#finalPass");
+
+// query select generate password
+    let button = document.querySelector("#generate");
+
+
+
+
+// create array for uppercase Alphabet
+    let uppercaseChar = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+// create array for lowercase alphabet
+    let lowercaseChar = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// create array for special characters
+    let specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-","+"];
+// create array for numbers
+    let numberArray = []
+// create array for total options selected
+
+// create for loop for numbers 
+
+for (let i= 0; i<= 9; i++) {
+    numberArray.push(i);
+}
+
+
+
+
+// create for loop for password
+
+button.addEventListener("click", function() {
+   if (passwordLength["value"] < 8 || passwordLength["value"] >128) {
+       alert("Whoops! Please choose a number that is between 8-128");
+       return;
+   } 
+
+   
+    let optionsSelect = [];
+
+    if (lowercase["checked"]) {
+        lowercaseChar.forEach(function(c){
+            optionsSelect.push(c);
+        });
+    }
+
+    if (uppercase["checked"]) {
+        uppercaseChar.forEach(function(c) {
+            optionsSelect.push(c);
+        });
+    }
+
+    if (characters["checked"]) {
+        specialChar.forEach(function(c){
+            optionsSelect.push(c);
+        });
+    }
+
+    if (numbers["checked"]) {
+        numberArray.forEach(function(c){
+            optionsSelect.push(c);
+        })
+    }
+
+    if (optionsSelect.length==0) {
+        alert("Whoops! It looks like you have not selected any criteria for your password. Check yourself before you wreck yourself. Pun intended.");
+        return;
+    }
+
+    let finalPassText = "";
+
+    for (let i=0; i<passwordLength["value"]; i++) {
+        finalPassText += optionsSelect[i];
+
+
+        // console.log(Math.floor(Math.random() * (optionsSelect.length-1)));
+    }
+
+    
+    finalPass["value"]=finalPassText;
+
+});
+
+// 
+

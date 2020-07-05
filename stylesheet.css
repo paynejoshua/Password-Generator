@@ -12,6 +12,7 @@
     Position: relative; 
 }
 
+
 .flex-container {
     display: flex;
 }
@@ -23,7 +24,7 @@ section {
     height: 566px;
     left: 147px;
     top: 67px;
-    background: #FF0000;
+    background: aliceblue;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -42,9 +43,66 @@ h2 {
 
 }
 
+
 .password-options {
     text-align: left;
-    margin-top: 8%;
+    margin-top: 2%;
     margin-left: 41%;
     align-items: flex-start;
+}
+
+
+.numberSelect {
+    width: 42%;
+    margin-top: 3%;
+    margin-left: -6%;
+    
+    
+}
+
+.txt_password {
+    margin-top: 5%;
+    margin-left: 26%;
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(46, 139, 87, 0.6);
+    padding: 0 0 0 5px;
+}
+
+.button {
+    margin-top: 4%;
+    margin-left: 38%;
+    padding: 15px 25px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: darkseagreen;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+      
+.button:hover {background-color: #3e8e41}
+      
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+@media only screen and (max-width: 800px) {
+    .flex-container {
+        width: 80%;
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .flex-container{
+        width: 100%;
+    }
 }
