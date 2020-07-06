@@ -1,48 +1,15 @@
-# 03 JavaScript: Password Generator
+This intention of this project was to implement many of the concepts that we have learned so far including:
+-HTML Layout
+-CSS Responsive Design
+-JavaScript implementation.
 
-Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+The emphasis was primarily getting the javascript to run data validation, looping through the different arrays, and finally generating a random password based
+on the selected criteria. 
 
-If you are unfamiliar with special characters, take a look at [some examples](https://www.owasp.org/index.php/Password_special_characters).
+I started off by writing some pseudo code for all of my files (HTML, CSS, and JavaScript) to gain a full scope of what I would need for each one. 
 
-## User Story
+For JavaScript I knew I had to tell it to get certain elements in order to build arrays for those elements. I then laid out what arrays I would need to build and then from there I started creating my for loops and conditional statements. 
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+The difficult part of this project was writing the random generator script. In the end it is a simple concept but was difficult to research and implement. Although now that I have done it I have mored confidence in my abilities. 
 
-## Acceptance Criteria
-
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
-
-The following image demonstrates the application functionality:
-
-![password generator demo](./Assets/03-javascript-homework-demo.png)
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+Enjoy!
