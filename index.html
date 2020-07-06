@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="stylesheet.css">
+   
     
     
 </head>
@@ -26,14 +27,17 @@
 
 <body>
  
- <main>
-     <div class="flex-container">
-    <Section>
-    <h2>Password Generator</h2>
+   
+   
 
+ <main>
+
+    <Section id="primary" id="secondary">
+        <h2>Password Generator</h2>
+       
     <hr class="line-break">
 
-    <div class="container">
+    
     <ul style="list-style-type:none" class="password-options">
     
     <!-- Add CSS to have in line with passwordLength and have box width be wider -->
@@ -75,9 +79,6 @@
     <input type="number" min="8" max="128" class="numberSelect" placeholder="Length of Password 8-128">
 </li>
 
-<!-- <li>
-    <label for=""></label>
-</li> -->
 </ul>
 
 <div class="passfield">
@@ -87,19 +88,18 @@
 
 <button class="button" id="generate">Generate Password</button>
 
-</div>
-
 <br>
 <p class="sectionFooter">NOTE: You must select Special Characters as one of your criteria.</p>
+
 </Section>
-
-</div>
-
 
 
 </main>
+    
+
 
 <script src="passwordscript.js" ></script> 
+
 
 </body>
 </html>
