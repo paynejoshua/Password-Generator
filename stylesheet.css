@@ -78,7 +78,7 @@ h2 {
 .button {
     margin-top: 4%;
     margin-left: 38%;
-    padding: 15px 25px;
+    padding: 2% 3%;
     font-size: 15px;
     text-align: center;
     cursor: pointer;
@@ -104,17 +104,62 @@ h2 {
     font-size: 55%;
 }
 
+
+
 /* Media Queries: Tablet Landscape */
 @media screen and (max-width: 1060px) {
-    #primary { width:67%; }
-    #secondary { width:30%; margin-left:3%;}  
+    #primary { 
+        width:67%; 
+        position: absolute;
+        left: 6%; 
+        height: 500px;
+    }
+    #secondary { width:30%; margin-left:3%;} 
+
+    
 }
 
 /* Media Queries: Tablet Portrait */
-@media screen and (max-width: 768px) {
-    #primary { width:100%; }
-    #secondary { width:100%; margin:0; border:none; }
+@media screen and (max-width: 769px) {
+    #primary { 
+        position: absolute; 
+        width:75%; 
+        left: 2%; 
 }
+    #secondary { width:100%; margin:0; border:none; }
+    .numberSelect {
+        width: 48%;
+    }
+}
+
+/* Media Queries: Mobile Phone */
+
+@media screen and (max-width: 425px) {
+    #primary {
+        width: 100%;
+        left: -10%;
+        position: absolute;
+        height: 400px;
+
+    }
+    .numberSelect {
+        width: 57%;
+        left: 4%;
+    }
+    .password-options {
+        left: -7%;
+
+    }
+    .button {
+        left: -7%;
+    }
+    .sectionFooter {
+        left: -7%;
+    }
+}
+
+
+
 
 @media (min-width: 640px) { body {font-size:1rem;} } 
 @media (min-width:960px) { body {font-size:1.2rem;} } 
