@@ -25,3 +25,8 @@ I started off by writing some pseudo code for all of my files (HTML, CSS, and Ja
 For JavaScript I knew I had to write out a script that would get certain elements in order to build arrays for those elements. I then laid out what arrays I would need to build and then from there I started creating my for loops and conditional statements. 
 
 Enjoy!
+
+## Technologies Used
+1. HTML
+2. CSS
+3. JavaScript
